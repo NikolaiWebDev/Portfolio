@@ -1,0 +1,417 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+body{
+    background-color: dimgray;
+    background-image: url(assets/img/background1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+@font-face {
+    font-family: Roboto;
+    src: url(assets/fonts/Roboto-Font_wdth-wght.ttf);
+}
+@font-face {
+    font-family: StieglitzSP;
+    src: url(assets/fonts/StieglitzSP-Bold_2.woff2) format("woff2");
+}
+#maincontentCentred{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#mainheadtext{
+    color: white;
+    font-size: 45pt;
+    font-family: StieglitzSP;
+}
+#MainTextarea{
+    resize: vertical;
+    width: 80%;
+    max-height: 100px;
+    min-height: 50px;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: Roboto;
+    font-size: 20pt;
+    background-color: rgb(10, 24, 76);
+    color: white;
+    background: linear-gradient(0deg,rgba(34, 24, 141, 1),rgba(0, 9, 38,0.9));
+    border: none;
+    box-shadow: 1px 1px 10px rgba(34, 24, 141, 1);
+    transition: box-shadow 1s ease;
+}
+#MainTextarea:focus{
+ box-shadow: 0 1px 10px white;
+}
+
+#addbutton{
+    all: unset;
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    font-size: 20pt;
+    font-family: Roboto;
+    background: linear-gradient(180deg,rgb(73, 59, 245) 50%,rgb(114, 56, 254));
+    border-radius: 5px;
+    padding: 2.5px;
+    color: white;
+    transition: 0.2s;
+    margin-top: 10px;
+}
+#addbutton:hover{
+    background: linear-gradient(180deg,rgb(73, 59, 245),rgb(73, 59, 245));
+    box-shadow: 0 0 10px white;
+}
+#addbutton:active{
+    background-color: rgb(74, 35, 159);
+}
+.tasktextbox{
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    width: 92%;
+    height: 100px;
+}
+.tasktextbox::-webkit-scrollbar{
+    display: none;
+}
+.taskLine{
+    position: relative;
+    height: 50px;
+    margin-top: 2px;
+    display: flex;
+    box-shadow: 0 0 10px rgb(29, 22, 127);
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient(0deg,rgba(34, 24, 141, 0.7),rgba(0, 9, 38,0.8));
+    margin-bottom: 10px;
+overflow: hidden;
+}
+
+.taskClassText{
+    position: absolute;
+    margin-top: 14px;
+    color: white;
+    font-size: 16pt;
+    font-family: Roboto;
+}
+.checkboxtask{
+    appearance: none;
+    margin-top: 15px;
+    margin-right: 5px;
+   height: 20px;
+   width: 20px;
+   background: linear-gradient(0deg,rgba(99, 51, 245, 0),rgba(90, 64, 206, 0));
+   cursor: pointer;
+   border-radius: 5px;
+   border: 1px solid snow;
+}
+.checkboxtask:checked{
+   background: linear-gradient(0deg,rgb(98, 51, 245),rgb(90, 64, 206));
+
+}
+.checkboxtask:checked::before{
+    content: "✔";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+       border-radius: 5px;
+       flex-shrink: unset;
+}
+#taskssection{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 53vh;
+    width: 80%;
+    background: linear-gradient(0deg,rgba(34, 24, 141, 0.7),rgba(0, 9, 38,0.9));
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgb(42, 1, 100);
+    padding:  10px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+#taskssection::-webkit-scrollbar{
+    display: none;
+}
+.deltaskbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22pt;
+position: absolute;
+margin-left: 92.5%;
+margin-top: 1%;
+color: white;
+width: 40px;
+height: 40px;
+user-select: none;
+cursor: pointer;
+font-family: StieglitzSP ;
+transition: 0.3s;
+}
+.deltaskbutton:hover{
+    transform: scale(1.1);
+    color: gray;
+}
+.deltaskbutton:active{
+    transform: scale(1.1);
+    color: red;
+}
+.inftaskstext{
+    margin-top: 25px;
+margin-left: 10px;
+color: white;
+font-size: 20pt;
+font-family: Roboto;
+transition: 0.3s;
+}
+#tasksinfoSection{
+    display: flex;
+    margin-top: 10px;
+    height: 80px;
+    width: 81%;
+    background: linear-gradient(0deg,rgba(34, 24, 141, 0.7),rgba(0, 9, 38,0.9));
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgb(42, 1, 100);
+}
+#centerGrafCircle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: linear-gradient(0deg,rgba(34, 24, 141, 1) ,rgba(0, 9, 38,1));
+    border-radius: 50%;
+    z-index: 4;
+    color: white;
+    user-select: none;
+}
+#PercentTasksGrafWrapper{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 60px;
+    width: 60px;
+    /* --beforeGraf-bg: linear-gradient(0deg,rgba(34, 24, 141, 1) ,rgba(0, 9, 38,1)); */
+    z-index: 3;
+    border-radius: 50%;
+    position: relative;
+    background: linear-gradient(0deg,rgba(34, 24, 141, 0.7) ,rgba(0, 9, 38,0.9));
+    --beforeGraf-bg: linear-gradient(0deg,rgb(29, 23, 124) ,rgba(0, 9, 38,1));
+    --beforeGraf-opacity: 1;
+    --afterGraf-bg: linear-gradient(0deg,rgba(34, 24, 141, 1) ,rgba(0, 9, 38,1));
+    --afterGraf-opacity: 0;
+
+}
+#PercentTasksGrafWrapper::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: var(--beforeGraf-bg);
+    opacity: var(--beforeGraf-opacity);
+    z-index: 3;
+}
+#PercentTasksGrafWrapper::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: var(--afterGraf-bg);
+    opacity: var(--afterGraf-opacity);
+    z-index: 3;
+}
+
+
+#linegraf{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+transition: 1s;
+}
+#linegraf::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: blue;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes EraseTask {
+    0%{
+        filter: blur(0px);
+        opacity: 1;
+            width: 94%;
+        position: absolute;
+    }100%{
+        filter: blur(100px);
+        opacity: 0;
+            width: 94%;
+        position: absolute;
+    }
+}
+@media (min-width: 1075px) and (max-width: 1352px) {
+.inftaskstext{
+margin-top: 25px;
+margin-left: 10px;
+color: white;
+font-size: 20pt;
+font-family: Roboto;
+}
+}
+@media (min-width: 784px) and (max-width: 1075px) {
+.inftaskstext{
+margin-top: 25px;
+margin-left: 10px;
+color: white;
+font-size: 20pt;
+font-family: Roboto;
+}
+.deltaskbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22pt;
+position: absolute;
+margin-left: 88.5%;
+margin-top: 1%;
+color: white;
+width: 40px;
+height: 40px;
+user-select: none;
+cursor: pointer;
+font-family: StieglitzSP ;
+transition: 0.3s;
+}
+.tasktextbox{
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    width: 89%;
+    height: 100px;
+}
+
+}
+@media (min-width: 421px) and (max-width: 784px) {
+.inftaskstext{
+margin-top: 34px;
+margin-left: 10px;
+color: white;
+font-size: 13pt;
+font-family: Roboto;
+}
+.deltaskbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22pt;
+position: absolute;
+margin-left: 92%;
+margin-top: 1%;
+color: white;
+width: 40px;
+height: 40px;
+user-select: none;
+cursor: pointer;
+font-family: StieglitzSP ;
+transition: 0.3s;
+}
+#MainTextarea{
+    resize: vertical;
+    width: 87%;
+}
+#taskssection{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 50vh;
+    width: 87%;
+}
+#tasksinfoSection{
+    margin-top: 10px;
+    height: 80px;
+    width: 93%;
+}
+}
+@media (max-width: 420px) {
+body{
+    background-color: rgb(9, 58, 90);
+    background: url(assets/img/background1.webp) center/cover no-repeat fixed;
+}
+
+.inftaskstext{
+margin-top: 34px;
+margin-left: 10px;
+color: white;
+font-size: 8pt;
+font-family: Roboto;
+}
+.deltaskbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15pt;
+position: absolute;
+margin-left: 85.5%;
+margin-top: 2%;
+color: white;
+width: 40px;
+height: 40px;
+user-select: none;
+cursor: pointer;
+font-family: StieglitzSP ;
+transition: 0.3s;
+}
+
+#MainTextarea{
+    resize: vertical;
+    width: 85%;
+}
+#taskssection{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 47vh;
+    width: 85%;
+}
+#tasksinfoSection{
+    margin-top: 10px;
+    height: 80px;
+    width: 88%;
+}
+#mainheadtext{
+    margin-top: 10px;
+    color: white;
+    font-size: 45pt;
+    font-family: StieglitzSP;
+}
+}

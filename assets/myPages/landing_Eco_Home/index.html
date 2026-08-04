@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/img/logo.webp">
+    <title>Eco-Home</title>
+</head>
+<body>
+<header id="header"><div id="headerlogo">   
+</div><p onclick="closeBurgerMenu()" id="headertext"><a href="#mainSection"><b>Eco-Home</b></a></p>
+
+<div id="headerCenter">
+<a href="#sectionNew"><div class="buttonsinheader" id="btnheader1"><p id="btnheadertext1" class="btnheadertext">Новинки</p></div></a>
+<a href="#sectionAssortiment"><div class="buttonsinheader" id="btnheader2"><p id="btnheadertext2" class="btnheadertext">Ассортимент</p></div></a>
+<a href="#sectionSales"><div class="buttonsinheader" id="btnheader3"><p id="btnheadertext3" class="btnheadertext">скидки</p></div></a>
+</div>
+
+<div class="buttonsinheader" id="btnheader4"><p id="btnheadertext4" class="btnheadertext"><a href="#mainFooter">Контакты</a></p></div>
+<div id="headerburgermenu"></div>
+</header>
+<section id="minimenu" style="z-index: 99;">
+    <a href="#sectionNew"><div onclick="closeBurgerMenu()" class="minimenurow"><p class="minimenurowtext">Новинки</p></div></a>
+    <a href="#sectionAssortiment"><div onclick="closeBurgerMenu()" class="minimenurow"><p class="minimenurowtext">Ассортимент</p></div></a>
+    <a href="#sectionSales"><div onclick="closeBurgerMenu()" class="minimenurow"><p class="minimenurowtext">скидки</p></div></a>
+    <a href="#mainFooter"><div onclick="closeBurgerMenu()" class="minimenurow"><p class="minimenurowtext">Контакты</p></div></a>
+</section>
+
+
+<section id="mainSection">
+<p id="MainText1" class="mainSectionText"><b>Eco-Home</b> — это ваш проводник к гармоничной и экологичной жизни.</p>
+<p id="MainText2" class="mainSectionText" >Мы создаём и тщательно отбираем товары для дома, которые заботятся одновременно о вашем комфорте, здоровье семьи и будущем планеты.</p>
+<p id="MainText3" class="mainSectionText" ><b>Наша миссия В мире</b>, <br> где пластик и химия окружают нас повсюду, мы верим, что дом может быть другим — чистым, безопасным и по-настоящему живым. Каждый продукт Eco-Home сделан из натуральных, возобновляемых или переработанных материалов, не содержит вредных веществ и соответствует самым высоким экологическим стандартам.</p>
+</section>
+
+
+<section id="sectionNew">
+<div class="dockingSections"></div>
+
+<div class="centredMain"><p class="MainSectionsClassText" id="NewMainText">Новинки</p></div>
+<div class="centredMain"><div id="NewsCarousel">
+<div id="NewsContain">
+    <div id="productsNew1" class="products">1</div>
+    <div id="productsNew2" class="products">2</div>
+    <div id="productsNew3" class="products">3</div>
+    <div id="productsNew4" class="products">4</div>
+    <div id="productsNew5" class="products">5</div>
+    <div id="productsNew6" class="products">6</div>
+</div>
+</div> <div id="NewRightbutton">></div><div id="NewLeftbutton"><</div></div></div>
+</section>
+<section id="sectionAssortiment">
+    <div class="dockingSections"></div>
+<div class="centredMain"><p class="MainSectionsClassText" id="AssortimentMainText">Ассортимент</p></div>
+
+<div class="centredMain"><div id="AssortimentCarousel">
+<div id="AssortimentContain">
+    <div id="productsAssortiment1" class="products">1</div>
+    <div id="productsAssortiment2" class="products">2</div>
+    <div id="productsAssortiment3" class="products">3</div>
+    <div id="productsAssortiment4" class="products">4</div>
+    <div id="productsAssortiment5" class="products">5</div>
+    <div id="productsAssortiment6" class="products">6</div>
+</div>
+</div> <div id="AssortimentRightbutton">></div><div id="AssortimentLeftbutton"><</div></div></div>
+
+</section>
+
+<section id="sectionSales">
+    <div class="dockingSections"></div>
+<div class="centredMain"><p class="MainSectionsClassText" id="SalesMainText">Скидки</p></div>
+  
+<div class="centredMain"><div id="SalesCarousel">
+<div id="SalesContain">
+    <div id="productsSales1" class="products">1</div>
+    <div id="productsSales2" class="products">2</div>
+    <div id="productsSales3" class="products">3</div>
+    <div id="productsSales4" class="products">4</div>
+    <div id="productsSales5" class="products">5</div>
+    <div id="productsSales6" class="products">6</div>
+</div>
+</div> <div id="SalesRightbutton">></div><div id="SalesLeftbutton"><</div></div></div>
+
+</section>
+<footer id="mainFooter">
+        <div class="dockingSections"></div>
+<div class="centredMain"><p id="FooterMainText">Контакты:</p></div>
+<div id="contactsdata">
+<div>Почта: email@mail.com</div><div>Телефон: +79123456789</div>
+</div>
+</footer>
+</body>
+<script src="main.js"></script>
+</html>

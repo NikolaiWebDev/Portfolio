@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+a{
+    all: unset;
+    cursor: pointer;
+}
+:root{
+    --main_opacity: 0;
+    --textShadow_angle: 10px 1px;
+}
+@font-face {
+    font-family:Oswald;
+    src: url(assets/fonts/Oswald.woff2) format("woff2");
+}
+#MainBackground{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -999;
+    background: linear-gradient(-45deg,
+        #0f172a 0%,
+        #1e1b4b 40%,
+        #312e81 70%,
+        #076575 100%)
+
+}
+#MainBackground::before{
+    content: "";
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -998;
+    transition: 2s;
+    opacity: var(--main_opacity);
+    background: linear-gradient(45deg,
+        #0f172a 0%,
+        #1e1b4b 40%,
+        #312e81 70%,
+        #076575 100%)
+}
+
+#TextWebDeveloper{
+    color: cyan;
+    text-shadow: var(--textShadow_angle) 1px blueviolet;
+    transition: 2s;
+}
+#headerbackground{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -998;
+    background-color: rgba(49, 49, 49, 0.599);
+    border-radius: 9px;
+}
+.whiteText{
+    color: white;
+    font-family: Oswald;
+}
+#btnSeeProjects{
+    position: relative;
+    left: 20px;
+    margin-top: 20px;
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 20pt;
+    background: linear-gradient(45deg,rgb(108, 82, 253),rgb(142, 117, 246));
+    transition: 0.5s;
+}
+#HiText{
+    font-size: 16pt;
+}
+#WhatIdotext{
+    font-size: 16pt;
+}
+#btnSeeProjects:hover{
+    transform: scale(1.1);
+    box-shadow: 10px 10px 0px rgb(133, 45, 219);
+}
+#technologyText{
+    margin-top: 12px;
+    font-size: 14pt;
+
+}
+header{
+    position: relative;
+    width: 100%;
+}
+#MyProjects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+    align-content: start;          
+    min-height: 100%;
+    padding: 3% 0;
+    width: 90%;
+    margin: 20px auto;             
+    background-color: rgba(49, 49, 49, 0.599);
+    border-radius: 5px;
+    gap: 40px;
+}
+
+.project {
+    position: relative;            
+    height: 470px;
+    width: 300px;
+    background-color: rgba(49, 49, 49,0.2);
+    border: 2px solid;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.project:hover {
+    transform: scale(1.1);
+}
+.picInProject{
+      position: relative;            
+    height: 300px;
+    width: 300px;
+    background-color: black;
+    border-radius: 5px; 
+    justify-self: center; 
+}
+.TextInProjects{
+    color: white;
+    text-align: center;
+    font-size: 12pt;
+    font-family:Oswald ;
+}
+#imgLogo{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-image: url(assets/image/MyLogo.png);
+    background-size: cover;
+    left: 70%;
+}
+#Project1pic{
+    background-image: url(assets/image/ProjectOne.webp);
+    background-size: cover;
+
+}
+#Project2pic{
+    background-image: url(assets/image/ProjectTwo.webp);
+    background-size: cover;
+
+}
+#Project3pic{
+    background-image: url(assets/image/ProjectThree.webp);
+    background-size: cover;
+
+}
+#TranslateBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14pt;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    left: 95%;
+    top: 10px;
+    font-family: Oswald;
+    background-color: rgba(3, 3, 3, 0.409);
+    border-radius: 10px;
+    transition: 0.5s;
+    z-index: 90;
+}
+#TranslateBtn:hover{
+    transform: scale(1.1);
+}
+
+@media (max-width: 1320px) and (min-width: 714px) {
+    #imgLogo{
+    position: absolute;
+    top: 60px;
+    height: 200px;
+    width: 200px;
+    background-image: url(assets/image/MyLogo.png);
+    background-size: cover;
+    left: 220px;
+}
+#TranslateBtn{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    left: 94%;
+    top: 10px;
+}
+}
+@media (max-width: 943px) {
+#imgLogo{
+    position: absolute;
+    top: 95px;
+    height: 200px;
+    width: 200px;
+    background-image: url(assets/image/MyLogo.png);
+    background-size: cover;
+    left: 220px;
+}
+#TranslateBtn{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    left: 90%;
+    top: 10px;
+}
+}
+@media (max-width: 420px) {
+#imgLogo{
+display: none;
+}
+}

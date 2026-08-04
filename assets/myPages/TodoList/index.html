@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon">
+</head>
+<body>
+<center><h1 id="mainheadtext">ToDoList</h1></center>
+<main id="maincontentCentred">
+<textarea id="MainTextarea" maxlength="50" placeholder="Добавить новую задачу" ></textarea>
+<button id="addbutton">Сохранить</button>
+
+<section id="tasksinfoSection">
+<div id="PercentTasksGrafWrapper">
+            <div id="linegraf"></div>
+            <div id="centerGrafCircle"><span id="grafpercentNum">0%</span></div>
+
+        
+</div>
+    <div class="inftaskstext" id="alltaskstext">Всего задач: <span id="alltasksnum">0</span></div>
+    <div class="inftaskstext" id="Complitedtaskstext">Выполненных: <span id="complitedtasksnum">0</span></div>
+    <div class="inftaskstext" id="NOComplitedtaskstext">осталось: <span id="NOComplitedtasknum">0</span></div>
+</section>
+<section id="taskssection">
+
+</section>
+</main>
+</body>
+<script src="main.js"></script>
+</html>
