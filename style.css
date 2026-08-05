@@ -43,9 +43,13 @@ a{
 }
 
 #TextWebDeveloper{
-    color: cyan;
-    text-shadow: var(--textShadow_angle) 1px blueviolet;
-    transition: 2s;
+  /* background: linear-gradient(90deg, rgb(62, 130, 242), rgb(32, 153, 211), rgb(163, 79, 242)); */
+  background: linear-gradient(90deg,rgb(69, 125, 240) 10% ,rgb(67, 98, 224) 20%,rgb(36, 154, 228) 30%,rgb(28, 143, 211),rgb(150, 79, 235));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(var(--textShadow_angle) 3px rgb(38, 27, 49));
+  transition: 2s;
 }
 #headerbackground{
     position:absolute;
@@ -64,10 +68,10 @@ a{
     left: 20px;
     margin-top: 20px;
     height: 40px;
-    width: 200px;
+    width: 290px;
     border-radius: 5px;
     font-size: 20pt;
-    background: linear-gradient(45deg,rgb(108, 82, 253),rgb(142, 117, 246));
+    background: linear-gradient(45deg,rgb(149, 70, 239),rgb(118, 85, 223),rgb(93, 90, 237),rgb(70, 127, 220),rgb(46, 150, 212),rgb(21, 184, 199));
     transition: 0.5s;
 }
 #HiText{
@@ -79,6 +83,28 @@ a{
 #btnSeeProjects:hover{
     transform: scale(1.1);
     box-shadow: 10px 10px 0px rgb(133, 45, 219);
+}
+#imgRigjtArrow{
+    margin-top: -20px;
+    position: relative;
+    display: inline-block;
+    top: 12px;
+    height: 40px;
+    width: 40px;
+    background-image: url(assets/image/ArrowRight.webp);
+    background-size: cover;
+
+}
+#imgRocket{
+    margin-top: -20px;
+    position: relative;
+    display: inline-block;
+    top: 12px;
+    height: 40px;
+    width: 40px;
+    background-image: url(assets/image/Rocket.webp);
+    background-size: cover;
+
 }
 #technologyText{
     margin-top: 12px;
@@ -95,7 +121,7 @@ header{
     justify-content: center;
     align-content: start;          
     min-height: 100%;
-    padding: 3% 0;
+    padding: 3%;
     width: 90%;
     margin: 20px auto;             
     background-color: rgba(49, 49, 49, 0.599);
@@ -216,4 +242,12 @@ header{
 #imgLogo{
 display: none;
 }
+#TranslateBtn{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    left: 85%;
+    top: 10px;
+}
+
 }
